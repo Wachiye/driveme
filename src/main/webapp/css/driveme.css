@@ -1,0 +1,148 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.main-about{
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+    padding: 150px 20px;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.main-about .title{
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.shadow{
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+}
+.display-flex{
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    text-align: center;
+}
+.display-flex-between{
+    all: initial;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    vertical-align: middle;
+    text-align: unset;
+}
+.pull-right{
+    all: initial;
+    float: right;
+}
+.pull-left{
+    all: initial;
+    float: left;
+}
+.title-bar{
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    text-align: center;
+}
+.desc .drop-cap{
+    padding-left: 5px;
+    padding-right: 10px;
+    float: left;
+    position: relative;
+    top: -0.35em;
+    margin-bottom: -0.5em;
+    margin-left: -6px;
+    margin-right: 2px;
+    font-size: 100px;
+}
+.why-us{
+    padding: 40px 10px;
+}
+.stats, .updates{
+    display: grid;
+    padding: 8px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.whys{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+}
+.whys .why, .stats .stat, .update{
+    all: initial;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    "_icon _head"
+    "_icon _desc";
+    background: #FFFFFF;
+    padding: 10px;
+    gap: 5px;
+    border-radius: 10px;
+}
+.stats .stat, .updates .update{
+    background: #078;
+    color: #FFFFFF;
+}
+
+.why .icon, .stat .icon, .update .icon{
+    grid-area: _icon;
+}
+.icon img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-position: center;
+    -o-object-position: center;
+}
+
+.stat .head, .why.head, .update .head{
+    font-size: 1.25rem;
+    font-weight: 600;
+    grid-area: _head;
+}
+.stat .stat_desc, .why .why_desc, .update .why_desc{
+    font-size: 1rem;
+    font-weight: 300;
+    grid-area: _desc;
+}
+.testimonial{
+    border: 1px solid #007788;
+    padding: 10px;
+    border-radius: 10px;
+}
+.footer{
+    margin-top: 10px;
+    padding: 40px 0;
+}
+.footer .partners{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.partners img{
+    width: 64px;
+    height: 64px;
+}
+@media only screen  and (max-width: 768px){
+    .stats{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
